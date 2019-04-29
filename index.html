@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="index.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <style>
+
+
+    body, html {
+        height: 100%;
+    }
+
+    .bg {
+    /* The image used */
+     background-image: url("bg_1.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y:scrollable;
+}
+
+	 #left_menu_bar{
+     position:absolute;
+     top:250px;
+     left:100px;
+    }
+
+    #video{
+    position:absolute;
+    color:white;
+    padding:10px;
+    top:100px;
+    left:300px;
+        }
+
+   #ask{
+    position:absolute;
+    left:1070px;
+    top:250px;
+
+    }
+
+   #myModal {
+    top:220px;
+    left:840px;
+    outline: none;
+    overflow:hidden;
+}
+
+    #form{
+    position:absolute;
+    padding:10px;
+    top:100px;
+    left:300px
+    }
+
+
+
+    </style>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script>
+    $(document).ready(function () {
+     $("#sub_nav_btn_1").click(function () {
+        $("#video_title").text('SUB NAV ONE VIDEO');
+        $("#sub_nav_btn_1").attr("src","btn_sub-nav_1_selected.png")
+         $("#sub_nav_btn_2").attr("src","btn_sub-nav_2_normal.png")
+         $("#sub_nav_btn_3").attr("src","btn_sub-nav_3_normal.png")
+         $("#video").show()
+         $("#ask").show()
+         $("#form").hide()
+
+
+
+
+
+
+        })
+    });
+     $(document).ready(function () {
+     $("#sub_nav_btn_2").click(function () {
+        $("#video_title").text('SUB NAV TWO VIDEO');
+        $("#sub_nav_btn_2").attr("src","btn_sub-nav_2_selected.png")
+        $("#sub_nav_btn_1").attr("src","btn_sub-nav_1_normal.png")
+        $("#sub_nav_btn_3").attr("src","btn_sub-nav_3_normal.png")
+                $("#video").show()
+                        $("#ask").show()
+                        $("#form").hide()
+
+
+
+        })
+    });
+     $(document).ready(function () {
+     $("#sub_nav_btn_3").click(function () {
+        $("#video").hide()
+        $("#form").show()
+        $("#ask").hide()
+
+
+        })
+    });
+
+
+
+</script>
+
+  </head>
+  <body>
+      <!-- Trigger the modal with a button -->
+
+      <!-- Modal -->
+
+
+
+  <div id="root" class="bg">
+   <div id="left_menu_bar">
+     <br> <input  id ="sub_nav_btn_1" type="image" src="btn_sub-nav_1_selected.png">
+    <br> <input type="image"  id= "sub_nav_btn_2" src="btn_sub-nav_2_normal.png">
+     <br><input type="image" id ="sub_nav_btn_3" src="btn_sub-nav_3_normal.png">
+
+   </div>
+
+    <div id="video">
+        <b>
+    <h2 id = "video_title">
+        <font color="white">SUB NAV ONE VIDEO</font><br>
+    </h2>
+        </b>
+      <p>
+      <font color="white">VIDEO SUBTITLE GOES HERE<br>
+      VIDEO SUBTITLE GOES HERE<br>
+      </font>
+    </p>
+
+    <video width="auto" height="400" controls="controls">
+      <source src="junglebook_360video.mp4" type="video/mp4" />
+
+    </video>
+
+  </div>
+      <div id="form"    style="display:none;">
+          <b>
+              <h3 id = "form_title">
+                  <font color="yellow">SIGN UP TO BE NOTIFIED</font><br>
+              </h3>
+          </b>
+              <h4>
+                  <font color=white>The company is continuously expanding. Fill out the short
+                  form to receive alerts as more techniques are added.
+                  </font><br>
+
+                  <br>
+
+                  <font color="red">*</font><font color="yellow">Indicates a required field</font>
+              </h4>
+          <b>
+              <form class="form-horizontal" action="#">
+                  <div class="form-group">
+                      <font color="yellow">  FIRST NAME:</font>
+                      <br>
+                      <div class="col-sm-6">
+                          <input type="text" class="form-control" id="f_name" placeholder="Enter first name" name="f_name">
+                  </div>
+                  </div>
+                  <div class="form-group">
+                      <font color="yellow">  LAST NAME:</font>
+                      <br>
+                      <div class="col-sm-6">
+                          <input type="text" class="form-control" id="l_name" placeholder="Enter last name" name="l_name">
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <font color="yellow">  EMAIL:</font>
+                      <br>
+                      <div class="col-sm-6">
+                          <input type="email" class="form-control" id="email" placeholder="Enter your mail" name="email">
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <font color="yellow">  COUNTRY:</font>
+                      <br>
+                      <div class="col-sm-6">
+                          <div class="dropdown">
+                              <input type="text" class="form-control" data-toggle="dropdown" placeholder="Choose Country" >
+                              <ul class="dropdown-menu">
+                                  <li><a href="#">India</a></li>
+                                  <li><a href="#">United States</a></li>
+                                  <li><a href="#">Japan</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+
+                  <div class="checkbox">
+                      <label><input type="checkbox" value=""><font color="yellow"> Send me websites updates when available
+                      </font></label>
+                  </div>
+                  </div>
+                  <div class="form-group">
+
+                      <div class="checkbox">
+                          <label><input type="checkbox" value=""><font color="yellow"> Send me websites updates on Products
+                          </font></label>
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <font color="yellow">  Do you opt in to receive the email messages selected above from company?</font>
+                      <br>
+                      <div class="colCOUNTRY-sm-6">
+                          <div class="dropdown">
+                              <input type="text" class="form-control" data-toggle="dropdown" placeholder="Please Choose" >
+                              <ul class="dropdown-menu">
+                                  <li><a href="#">Yes, I opt in </a></li>
+                                  <li><a href="#">No, I opt out</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+
+
+
+
+                  <div class="form-group">
+                      <div class="col-sm-offset-2 col-sm-6">
+                          <button type="submit" class="btn btn-warning">KEEP ME INFORMED</button>
+                      </div>
+                  </div>
+              </form>
+          </b>
+
+      </div>
+
+
+      <div id="ask" >
+        <input type="image"   src="btn_explore_normal.png" data-toggle="modal" data-target="#myModal">
+
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog" id="modal_up">
+                <input type="image" src="btn_explore_open.png" class="open" data-dismiss="modal">&times;<br>
+                <input type="image" src="menuitem_overview.png" class="open" data-dismiss="modal">&times;
+
+            </div>
+            <div class="modal-dialog" id=" modal_down">
+                <input type="image" src="btn_replay.png" class="open"  data-dismiss="modal">&times;<br>
+                <input type="image" src="btn_next.png" class="open" data-dismiss="modal">&times;<br>
+
+            </div>
+
+        </div>
+        </div>
+    </div>
+  <div id="overlay" >
+    <div >
+      <p>Content you want the user to see goes here.</p>
+    </div>
+  </div>
+
+
+  </body>
+
+
+
+
+
+</html>
